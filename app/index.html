@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" type="text/css" href="content/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    header{
+      background: black;
+      color:white;
+    }
+  </style>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout__drawer" style="background-color:">
+      <span class="mdl-layout-title">Material Design Lite</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#">Hello</a>
+        <a class="mdl-navigation__link" href="#">World.</a>
+        <a class="mdl-navigation__link" href="#">How</a>
+        <a class="mdl-navigation__link" href="#">Are</a>
+        <a class="mdl-navigation__link" href="#">You?</a>
+      </nav>
+  </div>
+    <main class="mdl-layout__content">
+      <div style="margin-top:40px; margin-left:20px;">
+        <input type="button" id="btnEncrypt" value="Encrypt">
+        <div id="elementToHide">
+          Some random data to hide
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    require('./libs/material.min.js');
+    require('./libs/knockout.min.js');
+    require('./libs/app.js');
+  </script>
+</body>
+</html>

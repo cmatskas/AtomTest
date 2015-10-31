@@ -1,0 +1,12 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "main": "main.js",
+  "description": "My first nmp test",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christos Matskas",
+  "license": "ISC"
+}
