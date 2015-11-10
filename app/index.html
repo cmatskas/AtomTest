@@ -2,19 +2,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World!</title>
-  <link rel="stylesheet" type="text/css" href="content/material.min.css">
+  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.grey-amber.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../node_modules/mdi/css/materialdesignicons.css" media="all" type="text/css">
   <style>
-    header{
-      background: black;
+    .mdl-layout__drawer-button i{
+      padding-top:10px;
       color:white;
     }
+    .mdl-layout__header{
+      background-color: #424242 !important;
+    }
+    .mdl-layout-title{
+      color:#ffa60c;
+    }
+
   </style>
 </head>
 <body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-    <div class="mdl-layout__drawer" style="background-color:">
-      <span class="mdl-layout-title">Material Design Lite</span>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+    <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">PasswordDefence</span>
+      <div class="mdl-layout-spacer"></div>
+    </div>
+  </header>
+    <div class="mdl-layout__drawer">
+      <span style="text-align:center; padding-top:10px;">
+        <span class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+          <i class="material-icons">add</i>
+        </span>
+      </span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="#">Hello</a>
         <a class="mdl-navigation__link" href="#">World.</a>
@@ -24,11 +42,35 @@
       </nav>
   </div>
     <main class="mdl-layout__content">
-      <div style="margin-top:40px; margin-left:20px;">
-        <input type="button" id="btnEncrypt" value="Encrypt">
-        <div id="elementToHide">
-          Some random data to hide
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col"></div>
+        <div class="mdl-cell mdl-cell--4-col" style="height:800px;padding-top:150px;">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="username">
+              <label class="mdl-textfield__label" for="username">Username...</label>
+            </div>
+            <div id="secretPassword" class="mdl-textfield mdl-js-textfield" style="text-align:right;">
+              <label class="mdl-button mdl-js-button mdl-button--icon" style="margin-top:3px;" for="password">
+                <i id="previewPassword" class="mdi mdi-eye" style="margin-top:7px;"></i>
+              </label>
+              <input class="mdl-textfield__input" type="password" id="password">
+              <label class="mdl-textfield__label" for="password">Password...</label>
+            </div>
+            <div id="visiblePassword" class="mdl-textfield mdl-js-textfield" style="display:none; text-align:right;">
+              <label class="mdl-button mdl-js-button mdl-button--icon" style="margin-top:3px;" for="passwordClear">
+                <i id="unPreviewPassword" class="mdi mdi-eye-off" style="margin-top:7px;"></i>
+              </label>
+              <input class="mdl-textfield__input" type="text" id="passwordClear">
+              <label class="mdl-textfield__label" for="passwordClear">Password...</label>
+            </div>
+            <div style="text-align:center;">
+              <input type="button"
+                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                   id="login"
+                   value="Login">
+            </div>
         </div>
+        <div class="mdl-cell mdl-cell--4-col"></div>
       </div>
     </main>
   </div>
